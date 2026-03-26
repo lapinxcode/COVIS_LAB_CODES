@@ -4,7 +4,6 @@ Define image class which read the image, extract chessboard corners find the hom
 import cv2
 import numpy as np
 
-
 def normalize_trans(points):
     """TODO: Compute a transformation which translates and scale the inputted points such that
         their center is at the origin and their average distance to the origin is sqrt(2) using Equation.(21)
@@ -14,7 +13,24 @@ def normalize_trans(points):
     Return:
         np.ndarray: similarity transformation for normalizing these points, shape (3, 3)
     """
-    pass
+    n_points = points.shape[1] # number of points in the image
+
+    u_bar = 0
+    v_bar = 0
+
+    for p in range(n_points):
+        u_bar += points[p,0] # sum elements of x
+        v_bar += points[p,1] # sum elements of y
+
+    u_bar = u_bar/n_points # avg x
+    v_bar = v_bar/n_points # avg y
+
+    mean_dist = np.sqrt(2)
+    s = np.sqrt(2)/mean_dist
+    
+    Tp = np.array([[s, 0, -s*u_bar],[0, s, -s*v_bar],[0, 0, 1]])
+
+    return Tp
 
 
 def homogenize(points):
@@ -83,7 +99,15 @@ class Image:
         Returns:
             np.ndarray: 3D coordinate of chessboard's corners, shape (self.rows * self.cols, 2)
         """
-        pass
+        coord = np.zeros([self.rows * self.cols, 2]) # 48 rows and 2 columns -> 1st column is dist in x and 2nd is dist in y (z is omitted)
+
+        for r in range(self.rows):
+            coord[r][0] = r*self.square_size # X
+
+        for c in range(self.cols):
+            coord[c][1] = c*self.square_size # Y
+        
+        return coord
 
     def find_homography(self):
         """TODO: Find the homography H that maps plane_pts to im_pts using Equation.(8)
@@ -92,21 +116,43 @@ class Image:
             np.ndarray: homography, shape (3, 3)
         """
         # get the normalize transformation
-        T_norm_im = normalize_trans(self.im_pts)
+        T_norm_im = normalize_trans(self.im_pts) 
         T_norm_plane = normalize_trans(self.plane_pts)
 
         # normalize image points and plane points
-        norm_im_pts = (T_norm_im @ homogenize(self.im_pts).T).T  # shape (n, 3)
-        norm_plane_pts = (T_norm_plane @ homogenize(self.plane_pts).T).T  # shape (n, 3)
+        norm_im_pts = (T_norm_im @ homogenize(self.im_pts).T).T  # shape (n, 3) - [u v 1]? p_hat
+        norm_plane_pts = (T_norm_plane @ homogenize(self.plane_pts).T).T  # shape (n, 3) - [X Y 1]? P_hat
 
         # TODO: construct linear equation to find normalized H using norm_im_pts and norm_plane_pts
-        Q = None
+        
+        Q = np.hstack((np.zeros(3),np.zeros(3),np.zeros(3)))
 
+        for i in range(self.cols*self.rows):
+
+            P = norm_plane_pts[i]
+
+            U = norm_im_pts[i][0]
+
+            V = norm_im_pts[i][1]
+
+            Q_1 = np.hstack((P,np.zeros(3),-U*P)) # 1st row of the Q matrix
+            Q_2 = np.hstack((np.zeros(3),P,-V*P)) # 2nd row of the Q matrix
+        
+            Q = np.vstack((Q,Q_1,Q_2))
+        
+        Q = Q[1:]    
+        print(Q)
+   
         # TODO: find normalized H as the singular vector Q associated with the smallest singular value
+        Usv, Ssv, Vhsv = np.linalg.svd(Q, full_matrices=True)
+
+        print(Ssv)
+
         H_norm = None
 
         # TODO: de-normalize H_norm to get H
         H = None
+
         return H
 
     def construct_v(self):
@@ -115,7 +161,13 @@ class Image:
         Return:
             np.ndarray: shape (2, 6)
         """
-        pass
+        v12 = self[1][2]
+        v11 = self[1][1]
+        v22 = self[2][2]
+
+        
+
+        return v
 
     def find_extrinsic(self, K):
         """TODO: Find camera pose w.r.t the world frame defined by the chessboard using the homography and camera intrinsic

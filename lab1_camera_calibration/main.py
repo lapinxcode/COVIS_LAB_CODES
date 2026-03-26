@@ -6,12 +6,15 @@ from image import Image
 
 
 if __name__ == '__main__':
+	
 	# get list of image names
 	im_list = [file for file in os.listdir('./imgs') if file.endswith('.jpg')]
 
 	# for each image, instantiate an Image object to calculate the Homography that map points from plane to image
 	images = [Image(os.path.join('./imgs', im_file)) for im_file in im_list]
 
+	
+	'''
 	# TODO: construct V to solve for b by stacking the output of im.construct_v() (Equation.(17))
 	V = None
 
@@ -72,4 +75,5 @@ if __name__ == '__main__':
 		ax.scatter(landmark_in_pixel[:, 0], landmark_in_pixel[:, 1])
 
 	
-	plt.show()
+	plt.show()'''
+
