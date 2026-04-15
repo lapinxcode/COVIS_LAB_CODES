@@ -43,7 +43,7 @@ train_set, train_dataloader = build_dataset_and_loader(
 
 # You can debug the dataset file here by printing variables
 
-model = MNISTClassifier(cfg=n_hidden_layers)
+model = MNISTClassifier(n_hidden_layers = n_hidden_layers)
 logger.info(model)
 
 optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
