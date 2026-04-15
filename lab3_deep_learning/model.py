@@ -77,4 +77,7 @@ class MNISTClassifier(nn.Module):
             cls.append(np.argmax(n)) # predicted - highest value between the 10 values
             prob.append(max(n))
 
+        cls = torch.tensor(cls).float()
+        prob = torch.tensor(prob).float()
+
         return cls, prob

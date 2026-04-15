@@ -33,7 +33,7 @@ def model_func_decorator(model: torch.nn.Module, data_dict: dict):
     for k, v in data_dict.items():
         if isinstance(v, np.ndarray):
             data_dict[k] = torch.from_numpy(v).to(device)
-        elif isinstance(v, torch.Tensor):
+        elif isinstance(v, torch.Tensor.float()):
             data_dict[k] = v.to(model.device)
 
     # invoke model's forward function

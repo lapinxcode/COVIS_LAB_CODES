@@ -44,6 +44,8 @@ train_set, train_dataloader = build_dataset_and_loader(
 # You can debug the dataset file here by printing variables
 
 model = MNISTClassifier(n_hidden_layers = n_hidden_layers)
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print('Using device:', device)
 logger.info(model)
 
 optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)

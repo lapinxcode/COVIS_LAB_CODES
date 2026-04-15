@@ -53,3 +53,247 @@
   )
 )
 2026-04-15 16:30:06,615   INFO  -------------------- Start Training --------------------
+2026-04-15 16:41:54,193   INFO  Loaded 60000 images for training
+2026-04-15 16:41:54,212   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 16:41:54,213   INFO  -------------------- Start Training --------------------
+2026-04-15 16:43:47,297   INFO  Loaded 60000 images for training
+2026-04-15 16:44:10,897   INFO  Loaded 60000 images for training
+2026-04-15 16:44:10,916   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 16:44:10,918   INFO  -------------------- Start Training --------------------
+2026-04-15 16:47:39,172   INFO  Loaded 60000 images for training
+2026-04-15 16:47:39,192   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 16:47:39,194   INFO  -------------------- Start Training --------------------
+2026-04-15 16:49:30,635   INFO  Loaded 60000 images for training
+2026-04-15 16:49:30,656   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 16:49:30,658   INFO  -------------------- Start Training --------------------
+2026-04-15 16:50:24,256   INFO  Loaded 60000 images for training
+2026-04-15 16:50:24,276   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 16:50:24,278   INFO  -------------------- Start Training --------------------
+2026-04-15 16:53:38,804   INFO  Loaded 60000 images for training
+2026-04-15 16:53:38,824   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 16:53:38,826   INFO  -------------------- Start Training --------------------
+2026-04-15 16:53:56,741   INFO  Loaded 60000 images for training
+2026-04-15 16:53:56,760   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 16:53:56,762   INFO  -------------------- Start Training --------------------
+2026-04-15 16:59:44,287   INFO  Loaded 60000 images for training
+2026-04-15 16:59:44,308   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 16:59:44,310   INFO  -------------------- Start Training --------------------
+2026-04-15 17:13:03,175   INFO  Loaded 60000 images for training
+2026-04-15 17:13:03,196   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:13:03,199   INFO  -------------------- Start Training --------------------
+2026-04-15 17:13:09,700   INFO  Loaded 60000 images for training
+2026-04-15 17:13:09,720   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:13:09,722   INFO  -------------------- Start Training --------------------
+2026-04-15 17:23:51,185   INFO  Loaded 60000 images for training
+2026-04-15 17:23:51,204   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:23:51,206   INFO  -------------------- Start Training --------------------
+2026-04-15 17:30:03,123   INFO  Loaded 60000 images for training
+2026-04-15 17:30:03,144   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:30:03,146   INFO  -------------------- Start Training --------------------
+2026-04-15 17:30:50,036   INFO  Loaded 60000 images for training
+2026-04-15 17:30:50,056   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:30:50,059   INFO  -------------------- Start Training --------------------
+2026-04-15 17:34:08,636   INFO  Loaded 60000 images for training
+2026-04-15 17:34:08,656   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:34:08,658   INFO  -------------------- Start Training --------------------
+2026-04-15 17:34:46,138   INFO  Loaded 60000 images for training
+2026-04-15 17:34:46,160   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:34:46,162   INFO  -------------------- Start Training --------------------
+2026-04-15 17:34:56,909   INFO  Loaded 60000 images for training
+2026-04-15 17:34:56,928   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:34:56,930   INFO  -------------------- Start Training --------------------
+2026-04-15 17:36:33,414   INFO  Loaded 60000 images for training
+2026-04-15 17:36:33,432   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:36:33,434   INFO  -------------------- Start Training --------------------
+2026-04-15 17:37:01,105   INFO  Loaded 60000 images for training
+2026-04-15 17:37:01,124   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:37:01,126   INFO  -------------------- Start Training --------------------
+2026-04-15 17:39:42,559   INFO  Loaded 60000 images for training
+2026-04-15 17:39:42,580   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:39:42,583   INFO  -------------------- Start Training --------------------
+2026-04-15 17:40:50,061   INFO  Loaded 60000 images for training
+2026-04-15 17:40:50,080   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:40:50,083   INFO  -------------------- Start Training --------------------
+2026-04-15 17:41:23,179   INFO  Loaded 60000 images for training
+2026-04-15 17:41:23,200   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:41:23,203   INFO  -------------------- Start Training --------------------
+2026-04-15 17:41:36,751   INFO  Loaded 60000 images for training
+2026-04-15 17:41:36,772   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:41:36,775   INFO  -------------------- Start Training --------------------
+2026-04-15 17:41:44,819   INFO  Loaded 60000 images for training
+2026-04-15 17:41:44,840   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:41:44,843   INFO  -------------------- Start Training --------------------
+2026-04-15 17:47:29,826   INFO  Loaded 60000 images for training
+2026-04-15 17:47:29,844   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:47:29,847   INFO  -------------------- Start Training --------------------
+2026-04-15 17:48:15,319   INFO  Loaded 60000 images for training
+2026-04-15 17:48:15,340   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:48:15,343   INFO  -------------------- Start Training --------------------
+2026-04-15 17:49:21,578   INFO  Loaded 60000 images for training
+2026-04-15 17:49:21,596   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:49:21,599   INFO  -------------------- Start Training --------------------
+2026-04-15 17:50:24,056   INFO  Loaded 60000 images for training
+2026-04-15 17:50:24,076   INFO  MNISTClassifier(
+  (net): Sequential(
+    (0): Linear(in_features=784, out_features=10, bias=True)
+    (1): Linear(in_features=10, out_features=10, bias=True)
+    (2): Linear(in_features=10, out_features=10, bias=True)
+  )
+)
+2026-04-15 17:50:24,079   INFO  -------------------- Start Training --------------------

@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 from mnist import MNIST # pip install python-mnist
 import logging
 from torch.utils.data import Dataset, DataLoader
@@ -56,11 +57,23 @@ class MNISTDataset(Dataset):
             'label': np.ndarray, shape (N)
         }
         """
-        images = []
-        labels = []
+        images = np.ndarray(shape = (len(data_batch), 28*28))
+        labels = np.ndarray(shape = (len(data_batch), 28*28))
+
         #TODO: implement this method
         for i in range(0, len(data_batch)):
-            images.append(data_batch[i]['image'])
-            labels.append(data_batch[i]['label'])
+            #images.append(data_batch[i]['image'])
+            #labels.append(data_batch[i]['label'])
+
+            images[i] = data_batch[i]['image']
+            labels[i] = data_batch[i]['label']
+        
+        # transforming data into tensors
+        #images = torch.tensor(images)
+        #labels = torch.tensor(labels)
+
+        # transforming data into tensors
+        #images = np.array(images)
+        #labels = np.array(labels)
 
         return {'image': images, 'label': labels}
