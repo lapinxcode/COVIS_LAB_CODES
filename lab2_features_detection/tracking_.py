@@ -3,8 +3,9 @@ import numpy as np
 
 def main():
 	orb = cv2.ORB_create()  # ORB keypoints detector
+	
 	matcher = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)  # key pts matcher
-	src_keypts, src_desc, src_frame = list(), list(), np.array([])
+	src_keypts, src_desc, src_frame,frame,src_frame_old = list(), list(), np.array([]),np.array([]),np.array([])
 	# hard-code bounding box in the 1st frame
 	row, col, h, w = 24, 46, 170, 160  # (row, col) is the top-left corner of the bbox, h is bbox's height, w is bbox's width
 	# NOTE: in image coordinate , the first coordinate is the row index, the 2nd coordinate is the column index
@@ -13,7 +14,7 @@ def main():
 		[row+w, col],
 		[row+w, col+h],
 		[row,col+h]
-	]).reshape(-1, 1, 2)  # this reshape is make bbox compatible with function cv2.perspectiveTransform
+	]).reshape(-1, 1, 2)  # this reshape makes bbox compatible with function cv2.perspectiveTransform
 	
 	#print((bbox.shape)) # debug
 
@@ -23,6 +24,7 @@ def main():
 	# main loop
 	while cap.isOpened():
 		ret, frame = cap.read()
+
 		if not ret:
 			print('Video has ended. Exitting')
 			break
@@ -31,7 +33,7 @@ def main():
 		# TODO - Done
 		gray_frame = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
-		if not src_keypts:
+		if not src_keypts :
 			# first frame is being read, compute src keypoints and src descriptors
 			# NOTE: these key points are computed inside the object of interest, not the entire image
 			# define the binary image that is zero every where except for the points inside the bounding box of the
@@ -61,7 +63,7 @@ def main():
 		matched_pts = np.float32([keypts[m.trainIdx].pt for m in matches]).reshape(-1, 2)  # shape (n_matches, 2)
 
 		# TODO - Done
-		M, inliers = cv2.findHomography(matched_src_pts,matched_pts,cv2.RHO)
+		M, inliers = cv2.findHomography(matched_src_pts,matched_pts,cv2.RANSAC)
 
 		# TODO - Done
 		# map bbox from the 1st frame to the current frame
@@ -78,6 +80,10 @@ def main():
 		if cv2.waitKey(50) & 0xFF == ord('q'):  # press "q" to end the program
 			break
 		cv2.imshow('src_frame', src_frame)
+
+		src_frame_old = src_frame
+		src_frame = frame 
+
 
 	cv2.destroyAllWindows()
 	cap.release()
